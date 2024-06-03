@@ -7,3 +7,7 @@ vet: fmt
 	go vet ./...
 build: vet
 	go build
+
+.PHONY:fmt vet clean
+clean:
+	rm *.exe
