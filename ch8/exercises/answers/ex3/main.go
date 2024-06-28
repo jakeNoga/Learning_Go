@@ -18,6 +18,7 @@ type Node[T comparable] struct {
 	Next  *Node[T]
 }
 
+// This is some what cleaver since he is always track the last node he always knows the memory location and can simply add the new node there and move the pointer.
 type List[T comparable] struct {
 	Head *Node[T]
 	Tail *Node[T]
