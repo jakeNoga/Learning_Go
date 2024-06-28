@@ -49,15 +49,17 @@ func main() {
 	var ipAddress string = "http://localhost"
 	var port string = "8080"
 	ipAddress = fmt.Sprintf("%s:%s", ipAddress, port)
-	if useJson {
-		ipAddress = fmt.Sprintf("%s/Form", ipAddress)
-	}
 
 	fmt.Println("Ip", ipAddress)
 	req, err := http.NewRequestWithContext(context.Background(),
 		http.MethodGet, ipAddress, nil)
 	if err != nil {
 		panic(err)
+	}
+
+	if useJson {
+		fmt.Println("Adding header")
+		req.Header.Set("Accept", "application/json") // Set Accept header to request JSON response
 	}
 
 	res, err := client.Do(req)

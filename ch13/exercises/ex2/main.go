@@ -49,11 +49,11 @@ func CreateSlogger() *slog.Logger {
 // curl http://localhost:8080
 func main() {
 
-	mux := http.NewServeMux()
 	mySlogger := CreateSlogger()
-
 	serverLogger := ServerLogger(mySlogger)
-	mux.Handle("/hello", serverLogger(RFC822ZTime{}))
+
+	mux := http.NewServeMux()
+	mux.Handle("/json", serverLogger(RFC822ZTime{}))
 
 	s := http.Server{
 		Addr:         ":8080",
