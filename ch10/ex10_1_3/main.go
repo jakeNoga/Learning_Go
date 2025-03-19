@@ -35,4 +35,5 @@ type Money struct {
 // [Investopedia]: https://www.investopedia.com/terms/e/exchangerate.asp
 func Convert(from Money, to string) (Money, error) {
 	// ...
+	return Money{0, "dollar"}, nil
 }

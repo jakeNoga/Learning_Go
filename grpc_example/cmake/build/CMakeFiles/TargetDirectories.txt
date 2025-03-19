@@ -1,0 +1,6 @@
+/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/generate_cpp_helloWorld.dir
+/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/generate_go_helloWorld.dir
+/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/hw_grpc_proto.dir
+/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/server.dir

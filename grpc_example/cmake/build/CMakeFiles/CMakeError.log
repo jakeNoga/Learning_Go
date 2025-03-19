@@ -1,0 +1,60 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2fb5d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fb5d.dir/build.make CMakeFiles/cmTC_2fb5d.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2fb5d.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2fb5d.dir/src.c.o -c /mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2fb5d
+/home/noga/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fb5d.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_2fb5d.dir/src.c.o -o cmTC_2fb5d 
+/usr/bin/ld: CMakeFiles/cmTC_2fb5d.dir/src.c.o: in function `main':
+src.c:(.text+0x2f): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x3b): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x47): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x58): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_2fb5d.dir/build.make:106: cmTC_2fb5d] Error 1
+gmake[1]: Leaving directory '/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_2fb5d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a36fe/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a36fe.dir/build.make CMakeFiles/cmTC_a36fe.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a36fe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a36fe.dir/CheckFunctionExists.c.o -c /home/noga/.local/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a36fe
+/home/noga/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a36fe.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_a36fe.dir/CheckFunctionExists.c.o -o cmTC_a36fe  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_a36fe.dir/build.make:106: cmTC_a36fe] Error 1
+gmake[1]: Leaving directory '/mnt/c/Users/nogaj/Documents/learning_go/grpc_example/cmake/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a36fe/fast] Error 2
+
+
+

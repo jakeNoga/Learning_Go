@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+da18f358360b3b24a8d52d309843d423 ../../protos/cpp_generated/helloWorld.pb.cc
+c74a3b01c4305dd90c3b8b0b81b0ba29 ../../protos/go_generated/helloWorld_grpc.pb.go
+3896659f02bfc0c2dc12e9516be256de CMakeFiles/generate_cpp_helloWorld
+3896659f02bfc0c2dc12e9516be256de CMakeFiles/generate_go_helloWorld

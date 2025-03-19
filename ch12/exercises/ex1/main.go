@@ -34,7 +34,7 @@ func doTheClose(wg *sync.WaitGroup, ch chan int) {
 }
 
 func main() {
-	ch := make(chan int) // Create a buffered channel
+	ch := make(chan int, 5) // Create a buffered channel
 	var wg sync.WaitGroup
 	wg.Add(2)
 

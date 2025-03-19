@@ -1,0 +1,13 @@
+This workspace was originally me just following Learing Go, 2nd Edition by Jon Bodner. After completing most of the 
+book. I started to continue to use this workspace to model things and learn things in a isolated environment. Thus
+far the project go_c_server_client is my most complected.
+
+go_c_server_client
+    - C client (created a c client that calls a c library that uses a go lib)
+        - c library
+            -go library
+                - Uses grpc to make calls to the go server
+
+    - go server (the go code uses grpc to receive the call and calls a function written in c)
+        - grpc
+        - c function

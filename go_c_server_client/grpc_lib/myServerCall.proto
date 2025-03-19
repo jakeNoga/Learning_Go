@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package myServerCall;
+
+option go_package = "/myServerCall";
+
+// The greeting service definition.
+service MyServerCall {
+  // Sends a greeting
+  rpc ServCall (MyCall) returns (MyReply) {}
+}
+
+// The request message containing the user's name and numbers
+message MyCall {
+  string Name = 1;
+  int32 Num1 = 2;
+  int32 Num2 = 3;
+}
+
+// The response message containing the status
+message MyReply {
+  int32 Status = 1;
+}

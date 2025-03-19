@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "grpc.h": "c",
+        "grpc_types.h": "c"
+    }
+}

@@ -1,0 +1,10 @@
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_async_server.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_async_client.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/hw_grpc_proto.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_async_client2.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_server.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_client.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_callback_server.dir
+/mnt/c/Users/nogaj/Documents/learning_go/proto_grpc_hello/helloworld/cmake/build/CMakeFiles/greeter_callback_client.dir
